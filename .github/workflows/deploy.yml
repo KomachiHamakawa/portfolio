@@ -1,0 +1,29 @@
+name: Deploy to Xserver
+
+on:
+  push:
+    branches:
+      - main  # mainブランチにpushされた時に実行
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: Upload files to Xserver via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          server-dir: public_html/portfolio.khamakawa.com/
+          local-dir: ./portfolio/
+          exclude: |
+            **/.git*
+            **/.github*
+            **/node_modules/**
+            **/template/**       # ← template フォルダ全体を除外
+            **/assets/org/**     # ← assets/org フォルダ全体を除外
