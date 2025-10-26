@@ -1,0 +1,14 @@
+<%- include('./_const', { data: data }) %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= data.title %></title>
+  <meta name="description" content="<%= data.description %>">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="<%- data.assetsDir + 'css/style.css' -%>">
+  <script src="<%- data.assetsDir + 'js/main.js' -%>"></script>
+  <%= data.headScript %>
+</head>
+<body>

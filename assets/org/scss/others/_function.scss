@@ -1,0 +1,6 @@
+@function getSize($size, $width: 750) {
+  @return #{$size / $width * 100};
+}
+@function lh($tracking, $fontsize) {
+  @return #{$tracking / $fontsize};
+}
