@@ -1,0 +1,100 @@
+<section class="kv">
+  <div class="kv_inner">
+    <h1>HAMAKAWA’S PORTFOLIO</h1>
+    <p>コーダーとしてデザイン再現性と使いやすさを意識した実装を行っています。</p>
+    <div class="kv_scrollWrap">
+      <div class="kv_scrollTxt">
+        <span class="kv_scrollTxt_span">scroll</span>
+      </div>
+      <div class="kv_scrollbar"></div>
+    </div>
+  </div>
+</section>
+
+<section id="works" class="works">
+  <div class="works_inner">
+    <h2 class="part_ttl">
+      <span class="part_ttl_en">Works</span>
+      <span class="part_ttl_ja">製作実績</span>
+    </h2>
+
+    <div class="swiper works_slideContainer">
+      <ul class="swiper-wrapper works_slideList">
+
+        <% 
+          // === 配列を定義 ===
+          const slideItem = [
+            {
+              img: "./assets/images/top/works/img2.jpg",
+              link: "./works01.html",
+              title: "自己/ポートフォリオサイト",
+              text: "HTML/CSS/JS"
+            },
+            {
+              img: "./assets/images/top/works/img3.jpg",
+              link: "./works02.html",
+              title: "案件/プロジェクト紹介サイト",
+              text: "HTML/CSS"
+            },
+            {
+              img: "./assets/images/top/works/img4.jpg",
+              link: "./works03.html",
+              title: "コーポレートサイト",
+              text: "HTML/CSS/JS"
+            },
+            {
+              img: "./assets/images/top/works/img5.jpg",
+              link: "./works04.html",
+              title: "LP制作",
+              text: "HTML/CSS"
+            },
+            {
+              img: "./assets/images/top/works/img6.jpg",
+              link: "./works05.html",
+              title: "ECサイト",
+              text: "HTML/CSS/JS"
+            },
+            {
+              img: "./assets/images/top/works/img7.jpg",
+              link: "./works06.html",
+              title: "ニュースサイト",
+              text: "HTML/CSS"
+            },
+            {
+              img: "./assets/images/top/works/img8.jpg",
+              link: "./works07.html",
+              title: "アプリサイト",
+              text: "HTML/CSS/JS"
+            }
+          ];
+        %>
+        <% slideItem.forEach(function(item) { %>
+          <li class="swiper-slide works_slideItem">
+            <a class="works_slideItem_link" href="<%- item.link %>">
+              <figure class="works_slideItem_img">
+                <img src="<%- item.img %>" alt="">
+              </figure>
+              <div class="works_content">
+                <h3 class="works_contentTtl"><%- item.title %></h3>
+                <p class="works_contentTxt"><%- item.text %></p>
+              </div>
+            </a>
+          </li>
+        <% }); %>
+      </ul>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="about_inner">
+     <h2 class="part_ttl">
+      <span class="part_ttl_en">About</span>
+      <span class="part_ttl_ja">製作者について</span>
+    </h2>
+  </div>
+
+</section>
