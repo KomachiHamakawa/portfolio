@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="./assets/js/app.js"></script>
 </head>
 
 <body>
@@ -67,8 +66,10 @@
 
     <section class="kv">
       <div class="kv_inner">
-        <h1>HAMAKAWA’S PORTFOLIO</h1>
-        <p>コーダーとしてデザイン再現性と使いやすさを意識した実装を行っています。</p>
+        <div class="kv_txtArea">
+          <h1 class="kv_ttl">HAMAKAWA’S PORTFOLIO</h1>
+          <p class="kv_txt">コーダーとしてデザイン再現性と使いやすさを意識した<br class="util-sp">実装を行っています。</p>
+        </div>
         <div class="kv_scrollWrap">
           <div class="kv_scrollTxt">
             <span class="kv_scrollTxt_span">scroll</span>
@@ -78,260 +79,253 @@
       </div>
     </section>
 
-    <section id="works" class="works">
-      <div class="works_inner">
-        <h2 class="part_ttl">
-          <span class="part_ttl_en">Works</span>
-          <span class="part_ttl_ja">製作実績</span>
-        </h2>
-        <div class="swiper works_slideContainer">
-          <ul class="swiper-wrapper works_slideList mod-1">
-            <li class="swiper-slide works_slideItem">
-              <a class="works_slideItem_link" href="./works/works01.html">
-                <figure class="works_slideItem_img">
-                  <img src="./assets/images/top/works/img2.jpg" alt="">
-                </figure>
-                <div class="works_content">
-                  <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
-                  <p class="works_contentTxt">HTML/CSS/JS</p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide works_slideItem mod-2">
-              <a class="works_slideItem_link" href="./works/works02.html">
-                <figure class="works_slideItem_img">
-                  <img src="./assets/images/top/works/img2.jpg" alt="">
-                </figure>
-                <div class="works_content">
-                  <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
-                  <p class="works_contentTxt">HTML/CSS/JS</p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide works_slideItem mod-3">
-              <a class="works_slideItem_link" href="./works/works03.html">
-                <figure class="works_slideItem_img">
-                  <img src="./assets/images/top/works/img3.jpg" alt="">
-                </figure>
-                <div class="works_content">
-                  <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
-                  <p class="works_contentTxt">HTML/CSS/JS</p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide works_slideItem mod-4">
-              <a class="works_slideItem_link" href="./works/works04.html">
-                <figure class="works_slideItem_img">
-                  <img src="./assets/images/top/works/img4.jpg" alt="">
-                </figure>
-                <div class="works_content">
-                  <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
-                  <p class="works_contentTxt">HTML/CSS/JS</p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide works_slideItem mod-5">
-              <a class="works_slideItem_link" href="./works/works05.html">
-                <figure class="works_slideItem_img">
-                  <img src="./assets/images/top/works/img5.jpg" alt="">
-                </figure>
-                <div class="works_content">
-                  <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
-                  <p class="works_contentTxt">HTML/CSS/JS</p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide works_slideItem mod-6">
-              <a class="works_slideItem_link" href="./works/works06.html">
-                <figure class="works_slideItem_img">
-                  <img src="./assets/images/top/works/img6.jpg" alt="">
-                </figure>
-                <div class="works_content">
-                  <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
-                  <p class="works_contentTxt">HTML/CSS/JS</p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide works_slideItem mod-7">
-              <a class="works_slideItem_link" href="./works/works07.html">
-                <figure class="works_slideItem_img">
-                  <img src="./assets/images/top/works/img7.jpg" alt="">
-                </figure>
-                <div class="works_content">
-                  <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
-                  <p class="works_contentTxt">HTML/CSS/JS</p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide works_slideItem mod-8">
-              <a class="works_slideItem_link" href="./works/works08.html">
-                <figure class="works_slideItem_img">
-                  <img src="./assets/images/top/works/img8.jpg" alt="">
-                </figure>
-                <div class="works_content">
-                  <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
-                  <p class="works_contentTxt">HTML/CSS/JS</p>
-                </div>
-              </a>
-            </li>
-          </ul>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
+    <section id="works" class="works part-section">
+      <h2 class="part_ttl">
+        <span class="part_ttl_en">Works</span>
+        <span class="part_ttl_ja">製作実績</span>
+      </h2>
+      <div class="swiper works_slideContainer">
+        <ul class="swiper-wrapper works_slideList mod-1">
+          <li class="swiper-slide works_slideItem">
+            <a class="works_slideItem_link" href="./works/works01.html">
+              <figure class="works_slideItem_img">
+                <img src="./assets/images/top/works/img2.jpg" alt="">
+              </figure>
+              <div class="works_content">
+                <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
+                <ul class="works_contentTxtList">
+                  <li class="works_contentTxtItem">
+                    担当範囲 : デザイン+コーディング
+                  </li>
+                  <li class="works_contentTxtItem">
+                    作業時間 : デザイン8時間/コーディング8時間
+                  </li>
+                  <li class="works_contentTxtItem">
+                    レスポンシブ対応
+                  </li>
+                  <li class="works_contentTxtItem">
+                    HTML/CSS/JS/Figma/
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="swiper-slide works_slideItem mod-2">
+            <a class="works_slideItem_link" href="./works/works02.html">
+              <figure class="works_slideItem_img">
+                <img src="./assets/images/top/works/img2.jpg" alt="">
+              </figure>
+              <div class="works_content">
+                <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
+                <ul class="works_contentTxtList">
+                  <li class="works_contentTxtItem">
+                    担当範囲 : デザイン+コーディング
+                  </li>
+                  <li class="works_contentTxtItem">
+                    作業時間 : デザイン8時間/コーディング8時間
+                  </li>
+                  <li class="works_contentTxtItem">
+                    レスポンシブ対応
+                  </li>
+                  <li class="works_contentTxtItem">
+                    HTML/CSS/JS/Figma/
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="swiper-slide works_slideItem mod-3">
+            <a class="works_slideItem_link" href="./works/works03.html">
+              <figure class="works_slideItem_img">
+                <img src="./assets/images/top/works/img3.jpg" alt="">
+              </figure>
+              <div class="works_content">
+                <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
+               <ul class="works_contentTxtList">
+                  <li class="works_contentTxtItem">
+                    担当範囲 : デザイン+コーディング
+                  </li>
+                  <li class="works_contentTxtItem">
+                    作業時間 : デザイン8時間/コーディング8時間
+                  </li>
+                  <li class="works_contentTxtItem">
+                    レスポンシブ対応
+                  </li>
+                  <li class="works_contentTxtItem">
+                    HTML/CSS/JS/Figma/
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="swiper-slide works_slideItem mod-4">
+            <a class="works_slideItem_link" href="./works/works04.html">
+              <figure class="works_slideItem_img">
+                <img src="./assets/images/top/works/img4.jpg" alt="">
+              </figure>
+              <div class="works_content">
+                <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
+               <ul class="works_contentTxtList">
+                  <li class="works_contentTxtItem">
+                    担当範囲 : デザイン+コーディング
+                  </li>
+                  <li class="works_contentTxtItem">
+                    作業時間 : デザイン8時間/コーディング8時間
+                  </li>
+                  <li class="works_contentTxtItem">
+                    レスポンシブ対応
+                  </li>
+                  <li class="works_contentTxtItem">
+                    HTML/CSS/JS/Figma/
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="swiper-slide works_slideItem mod-5">
+            <a class="works_slideItem_link" href="./works/works05.html">
+              <figure class="works_slideItem_img">
+                <img src="./assets/images/top/works/img5.jpg" alt="">
+              </figure>
+              <div class="works_content">
+                <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
+               <ul class="works_contentTxtList">
+                  <li class="works_contentTxtItem">
+                    担当範囲 : デザイン+コーディング
+                  </li>
+                  <li class="works_contentTxtItem">
+                    作業時間 : デザイン8時間/コーディング8時間
+                  </li>
+                  <li class="works_contentTxtItem">
+                    レスポンシブ対応
+                  </li>
+                  <li class="works_contentTxtItem">
+                    HTML/CSS/JS/Figma/
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="swiper-slide works_slideItem mod-6">
+            <a class="works_slideItem_link" href="./works/works06.html">
+              <figure class="works_slideItem_img">
+                <img src="./assets/images/top/works/img6.jpg" alt="">
+              </figure>
+              <div class="works_content">
+                <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
+               <ul class="works_contentTxtList">
+                  <li class="works_contentTxtItem">
+                    担当範囲 : デザイン+コーディング
+                  </li>
+                  <li class="works_contentTxtItem">
+                    作業時間 : デザイン8時間/コーディング8時間
+                  </li>
+                  <li class="works_contentTxtItem">
+                    レスポンシブ対応
+                  </li>
+                  <li class="works_contentTxtItem">
+                    HTML/CSS/JS/Figma/
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="swiper-slide works_slideItem mod-7">
+            <a class="works_slideItem_link" href="./works/works07.html">
+              <figure class="works_slideItem_img">
+                <img src="./assets/images/top/works/img7.jpg" alt="">
+              </figure>
+              <div class="works_content">
+                <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
+               <ul class="works_contentTxtList">
+                  <li class="works_contentTxtItem">
+                    担当範囲 : デザイン+コーディング
+                  </li>
+                  <li class="works_contentTxtItem">
+                    作業時間 : デザイン8時間/コーディング8時間
+                  </li>
+                  <li class="works_contentTxtItem">
+                    レスポンシブ対応
+                  </li>
+                  <li class="works_contentTxtItem">
+                    HTML/CSS/JS/Figma/
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="swiper-slide works_slideItem mod-8">
+            <a class="works_slideItem_link" href="./works/works08.html">
+              <figure class="works_slideItem_img">
+                <img src="./assets/images/top/works/img8.jpg" alt="">
+              </figure>
+              <div class="works_content">
+                <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
+               <ul class="works_contentTxtList">
+                  <li class="works_contentTxtItem">
+                    担当範囲 : デザイン+コーディング
+                  </li>
+                  <li class="works_contentTxtItem">
+                    作業時間 : デザイン8時間/コーディング8時間
+                  </li>
+                  <li class="works_contentTxtItem">
+                    レスポンシブ対応
+                  </li>
+                  <li class="works_contentTxtItem">
+                    HTML/CSS/JS/Figma/
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </section>
-
-    <section id="works" class="works">
-      <div class="works_inner">
-        <h2 class="part_ttl">
-          <span class="part_ttl_en">Works</span>
-          <span class="part_ttl_ja">製作実績</span>
-        </h2>
-
-        <div class="swiper works_slideContainer">
-          <ul class="swiper-wrapper works_slideList">
-            <li class="swiper-slide works_slideItem mod-1">
-              <a class="works_slideItem_link" href="./works01.html">
-                <figure class="works_slideItem_img">
-                  <img src="./assets/images/top/works/img2.jpg" alt="">
-                </figure>
-                <div class="works_content">
-                  <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
-                  <p class="works_contentTxt">HTML/CSS/JS</p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide works_slideItem mod-2">
-              <a class="works_slideItem_link" href="./works01.html">
-                <figure class="works_slideItem_img">
-                  <img src="./assets/images/top/works/img2.jpg" alt="">
-                </figure>
-                <div class="works_content">
-                  <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
-                  <p class="works_contentTxt">HTML/CSS/JS</p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide works_slideItem mod-3">
-              <a class="works_slideItem_link" href="./works01.html">
-                <figure class="works_slideItem_img">
-                  <img src="./assets/images/top/works/img3.jpg" alt="">
-                </figure>
-                <div class="works_content">
-                  <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
-                  <p class="works_contentTxt">HTML/CSS/JS</p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide works_slideItem mod-4">
-              <a class="works_slideItem_link" href="./works01.html">
-                <figure class="works_slideItem_img">
-                  <img src="./assets/images/top/works/img4.jpg" alt="">
-                </figure>
-                <div class="works_content">
-                  <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
-                  <p class="works_contentTxt">HTML/CSS/JS</p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide works_slideItem mod-5">
-              <a class="works_slideItem_link" href="./works01.html">
-                <figure class="works_slideItem_img">
-                  <img src="./assets/images/top/works/img5.jpg" alt="">
-                </figure>
-                <div class="works_content">
-                  <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
-                  <p class="works_contentTxt">HTML/CSS/JS</p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide works_slideItem mod-6">
-              <a class="works_slideItem_link" href="./works01.html">
-                <figure class="works_slideItem_img">
-                  <img src="./assets/images/top/works/img6.jpg" alt="">
-                </figure>
-                <div class="works_content">
-                  <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
-                  <p class="works_contentTxt">HTML/CSS/JS</p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide works_slideItem mod-7">
-              <a class="works_slideItem_link" href="./works01.html">
-                <figure class="works_slideItem_img">
-                  <img src="./assets/images/top/works/img7.jpg" alt="">
-                </figure>
-                <div class="works_content">
-                  <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
-                  <p class="works_contentTxt">HTML/CSS/JS</p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide works_slideItem mod-8">
-              <a class="works_slideItem_link" href="./works08.html">
-                <figure class="works_slideItem_img">
-                  <img src="./assets/images/top/works/img8.jpg" alt="">
-                </figure>
-                <div class="works_content">
-                  <h3 class="works_contentTtl">自主/ポートフォリオサイト</h3>
-                  <p class="works_contentTxt">HTML/CSS/JS</p>
-                </div>
-              </a>
-            </li>
-          </ul>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+    <section id="about" class="about part-section"">
+        <h2 class=" part_ttl">
+      <span class="part_ttl_en">About</span>
+      <span class="part_ttl_ja">製作者について</span>
+      </h2>
+      <div class="about_contentWrap">
+        <figure class="about_content_img">
+          <img src="./assets/images/top/about/img.jpg" alt="">
+        </figure>
+        <div class="abotu_txtWrap">
+          <h3 class="about_name"><span class="about_name_kana">はまかわ</span><span class="about_name_full">濱川 こまち</span></h3>
+          <p class="about_txt">
+            2001年生まれ、茨城県在住。<br>職業訓練校でWebデザインを学び、卒業後は制作会社で約2年間Webコーダーとして勤務してきました。<br>キャンペーンLPやプロジェクトサイトなどの制作を担当し、デザインの意図を正確に再現することを大切にしています。<br>ユーザーが使いやすいサイトはもちろん、チーム内でも読みやすく保守しやすいコーディングを心がけ、より良い制作環境づくりに努めています。
+          </p>
         </div>
       </div>
-    </section>
-    <section id="about" class="about">
-      <div class="about_inner">
-        <h2 class="part_ttl">
-          <span class="part_ttl_en">About</span>
-          <span class="part_ttl_ja">製作者について</span>
-        </h2>
-        <div class="about_contentWrap">
-          <figure class="about_content_img">
-            <img src="./assets/images/top/about/img.jpg" alt="">
-          </figure>
-          <div class="abotu_txtWrap">
-            <h3 class="about_name"><span class="about_name_kana">はまかわ</span><span class="about_name_full">濱川 こまち</span></h3>
-            <p class="about_txt">
-              2001年生まれ、茨城県在住。<br>職業訓練校でWebデザインを学び、卒業後は制作会社で約2年間Webコーダーとして勤務してきました。<br>キャンペーンLPやプロジェクトサイトなどの制作を担当し、デザインの意図を正確に再現することを大切にしています。<br>ユーザーが使いやすいサイトはもちろん、チーム内でも読みやすく保守しやすいコーディングを心がけ、より良い制作環境づくりに努めています。
-            </p>
-          </div>
+      <dl class="about_skillList">
+        <div class="about_skillListwrap">
+          <dt class="about_skillTerm">使用言語</dt>
+          <dd class="about_skillDesc">HTML/CSS/JavaScript</dd>
         </div>
-        <dl class="about_skillList">
-          <div class="about_skillListwrap">
-            <dt class="about_skillTerm">使用言語</dt>
-            <dd class="about_skillDesc">HTML/CSS/JavaScript</dd>
-          </div>
-          <div class="about_skillListwrap">
-            <dt class="about_skillTerm">ツール</dt>
-            <dd class="about_skillDesc">SCSS / EJS / GSAP / Wordpress / Git,Github / shopify / Photoshop / Illustrator / Figma</dd>
-          </div>
-        </dl>
-      </div>
+        <div class="about_skillListwrap">
+          <dt class="about_skillTerm">ツール</dt>
+          <dd class="about_skillDesc">SCSS / EJS / GSAP / Wordpress / Git,Github / shopify / Photoshop / Illustrator / Figma</dd>
+        </div>
+      </dl>
     </section>
 
-    <section id="contact" class="contact">
-      <div class="contact_inner">
-        <h2 class="part_ttl">
-          <span class="part_ttl_en">Contact</span>
-          <span class="part_ttl_ja">お問い合わせ</span>
-        </h2>
-        <address class="contact_address">
-          <p class="contact_tel">TEL: 080-3953-4627</p>
-          <p class="contact_mail">E-MAIL: <a class="contact_mail_link" href="mailto:hamakawakomachi@gmail.com" target="_blank">hamakawakomachi@gmail.com</a></p>
-        </address>
-      </div>
+    <section id="contact" class="contact part-section"">
+        <h2 class=" part_ttl">
+      <span class="part_ttl_en">Contact</span>
+      <span class="part_ttl_ja">お問い合わせ</span>
+      </h2>
+      <address class="contact_address">
+        <p class="contact_tel">TEL: 080-3953-4627</p>
+        <p class="contact_mail">E-MAIL: <a class="contact_mail_link" href="mailto:hamakawakomachi@gmail.com" target="_blank">hamakawakomachi@gmail.com</a></p>
+      </address>
     </section>
   </main>
   <footer>
     <small>© 2025 hamakawa's portfolio All rights reserved</small>
   </footer>
   <script src="./assets/js/swiper-bundle.min.js"></script>
-  <script src="./assets/js/app.js"></script>
+  <script src="./assets/js/app.js" defer></script>
 </body>

@@ -29,8 +29,10 @@ a:hover {
     opacity: 0.7;
   }
 }
-.util-sp{
+
+.util-sp {
   display: block;
+
   @media (min-width: 768px) {
     display: none !important;
   }
@@ -39,6 +41,7 @@ a:hover {
 
 /* calc(375 / 750 * 100%) */
 
+/* header */
 .part-header {
   @media (min-width: 768px) {
     opacity: 0.85;
@@ -110,15 +113,18 @@ a:hover {
     color: #F5B544;
   }
 }
-.part-header_closeBtnWrap{
+
+.part-header_closeBtnWrap {
   position: absolute;
   z-index: 150;
   width: calc(100 / 750 * 100vw);
   height: calc(100 / 750 * 100vw);
   top: calc(16 / 750 * 100vw);
-  right: calc(16 / 750 * 100vw);;
+  right: calc(16 / 750 * 100vw);
+  ;
 }
-.part-header_closeBtn{
+
+.part-header_closeBtn {
   position: relative;
   background-color: #F5B544;
   border: none;
@@ -127,6 +133,7 @@ a:hover {
   height: 100%;
   width: 100%;
 }
+
 .part-header_closeBtn_line {
   position: absolute;
   background-color: #FFF8ED;
@@ -136,15 +143,16 @@ a:hover {
   top: 50%;
   left: 50%;
 }
+
 .part-header_closeBtn_line.mod-1 {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-/* 2本目を-45度回転 */
 .part-header_closeBtn_line.mod-2 {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-.part-header_opanBtnWrap{
+
+.part-header_opanBtnWrap {
   position: fixed;
   top: calc(16 / 750 * 100vw);
   right: calc(16 / 750 * 100vw);
@@ -152,7 +160,8 @@ a:hover {
   height: calc(100 / 750 * 100vw);
   z-index: 50;
 }
-.part-header_openBtn{
+
+.part-header_openBtn {
   position: relative;
   background-color: #FFF8ED;
   border: none;
@@ -162,7 +171,8 @@ a:hover {
   width: 100%;
   display: block;
 }
-.part-header_openBtn_line{
+
+.part-header_openBtn_line {
   position: absolute;
   background-color: #F5B544;
   display: block;
@@ -171,13 +181,215 @@ a:hover {
   left: 50%;
   transform: translateX(-50%)
 }
-.part-header_openBtn_line.mod-1{
+
+.part-header_openBtn_line.mod-1 {
   top: calc(32 / 750 * 100vw);
 }
-.part-header_openBtn_line.mod-2{
+
+.part-header_openBtn_line.mod-2 {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.part-header_openBtn_line.mod-3{
+
+.part-header_openBtn_line.mod-3 {
   bottom: calc(32 / 750 * 100vw);
+}
+
+/* kv */
+.kv {
+  /* height: calc(800 / 750 * 100vw); */
+  position: relative;
+  min-height: 100vh;
+}
+
+.kv_txtArea {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.kv_ttl {
+  font-size: calc(48 / 750 * 100vw);
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+.kv_txt {
+  font-size: calc(24 / 750 * 100vw);
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+  margin-top: calc(12 / 750 * 100vw);
+  line-height: 1.5;
+}
+
+.kv_scrollWrap {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.kv_scrollTxt {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: calc(136 / 750 * 100vw);
+  color: #333;
+  font-size: calc(24 / 750 * 100vw);
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  writing-mode: vertical-lr;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.kv_scrollbar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+.kv_scrollbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(2 / 750 * 100vw);
+  height: calc(120 / 750 * 100vw);
+  background: #333;
+  animation: liner 2.5s cubic-bezier(1, 0, 0, 1) infinite;
+}
+
+@keyframes liner {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+
+  30% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+
+  70% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+}
+
+.part-section {
+  width: calc(686 / 750 * 100vw);
+  margin-inline: auto;
+  margin-top: calc(80 / 750 * 100vw);
+  padding-top: calc(40 / 750 * 100vw);
+  padding-bottom: calc(60 / 750 * 100vw);
+  background-color: #FFF8ED;
+  opacity: 0.9;
+  border-radius: calc(20 / 750 * 100vw);
+}
+
+.part_ttl_en {
+  display: block;
+  font-size: calc(40 / 750 * 100vw);
+  color: #333;
+  text-align: center;
+  position: relative;
+}
+
+.part_ttl_en::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: calc(-8 / 750 * 100vw);
+  width: calc(32 / 750 * 100vw);
+  height: calc(2 / 750 * 100vw);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #F5B544;
+}
+
+.part_ttl_ja {
+  display: block;
+  font-size: calc(16 / 750 * 100vw);
+  color: #333;
+  text-align: center;
+  margin-top: calc(18 / 750 * 100vw);
+}
+
+/* works */
+.works_slideContainer {
+  padding-top: calc(40 / 750 * 100vw);
+  padding-bottom: calc(60 / 750 * 100vw);
+}
+
+.orks_slideList {
+  display: flex;
+}
+
+.works_slideItem {
+  width: calc(584 / 750 * 100vw);
+  aspect-ratio: 1/1;
+  padding-inline: calc(14 / 750 * 100vw);
+}
+.works_slideItem_link{
+  display: block;
+  height: 100%;
+  width: calc(560 / 750 * 100vw);
+  margin-inline: auto;
+  box-shadow: 0 calc(4 / 750 * 100vw) calc(4 / 750 * 100vw) rgba(0, 0, 0, 0.25);
+  border-radius: calc(20 / 750 * 100vw);
+  overflow: hidden;
+}
+.swiper-navigation-icon{
+  display: none;;
+}
+.swiper-button-next, .swiper-button-prev{
+  background: url(../images/top/works/arrow.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: calc(80 / 750 * 100vw);
+  height: calc(80 / 750 * 100vw);
+  right: calc(16 / 750 * 100vw) !important;
+  border-radius: 50%;
+  box-shadow: calc(2 / 750 * 100vw) calc(2 / 750 * 100vw) calc(10 / 750 * 100vw) rgba(0, 0, 0, 0.25);
+}
+.swiper-button-prev{
+  right: auto !important;
+  left: calc(16 / 750 * 100vw) !important;
+  transform: scaleX(-1);
+}
+.swiper-pagination{
+  bottom: 0 !important;
+  top: auto !important;
+}
+.swiper-pagination-bullet-active{
+  background-color: #F5B544 !important;
+}
+.works_content{
+  padding-block: calc(32 / 750 * 100vw);
+  padding-inline: calc(24 / 750 * 100vw);
+}
+.works_contentTtl{
+ font-weight: 700;
+ list-style: 1.5;
+ font-size: calc(24 / 750 * 100vw);
+}
+.works_contentTxtItem{
+  font-size: calc(16 / 750 * 100vw);
+  line-height: 1.5;
+}
+.works_contentTxtList{
+  margin-top: calc(16 / 750 * 100vw);
 }
