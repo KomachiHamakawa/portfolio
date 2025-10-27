@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
+/* html{
+  scroll-behavior: smooth;
+} */
+
 body {
   color: #333;
   font-family: "Lora", "Noto Serif JP", serif;
@@ -7,6 +11,10 @@ body {
   font-weight: 400;
   position: relative;
   line-height: 1;
+}
+
+body.add-scrollLock{
+  overflow: hidden;
 }
 
 body::before {
@@ -18,6 +26,7 @@ body::before {
   background-size: 100% auto;
   position: fixed;
   z-index: -1;
+  pointer-events: none;
 }
 
 a {
@@ -102,7 +111,9 @@ a:hover {
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 150;
   transform: translateX(100%);
+  transition: transform 0.3s ease;
 
   @media (min-width: 768px) {
     transform: translateX(0);
@@ -193,6 +204,7 @@ a:hover {
   border: none;
   font-size: 0;
   border-radius: 50%;
+  cursor: pointer;
   height: 100%;
   width: 100%;
 }
@@ -221,7 +233,7 @@ a:hover {
   right: calc(16 / 750 * 100vw);
   width: calc(100 / 750 * 100vw);
   height: calc(100 / 750 * 100vw);
-  z-index: 50;
+  z-index: 100;
 }
 
 .part-header_openBtn {
@@ -233,6 +245,7 @@ a:hover {
   height: 100%;
   width: 100%;
   display: block;
+  cursor: pointer;
   box-shadow: calc(2 / 750 * 100vw) calc(2 / 750 * 100vw) calc(10 / 750 * 100vw) rgba(0, 0, 0, 0.25);
 }
 
@@ -263,7 +276,11 @@ a:hover {
 .kv {
   /* height: calc(800 / 750 * 100vw); */
   position: relative;
-  min-height: 700px;
+  min-height: 600px;
+  height: 100vh;
+  @media (min-width: 768px) {
+    min-height: 700px;
+  }
 }
 
 .kv_txtArea {
