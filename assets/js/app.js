@@ -32,6 +32,7 @@ const breakpoint = 768;
 const body = document.body;
 
 let scrollPosition = 0;
+let isLocked = false;
 
 // ================================
 // スクロールロック制御（iOS対応）
@@ -41,20 +42,30 @@ function preventTouchMove(e) {
 }
 
 function lockScroll() {
+  if (isLocked) return;
+  isLocked = true;
+
   body.classList.add('add-scrollLock');
   scrollPosition = window.scrollY;
+
   Object.assign(body.style, {
     position: 'fixed',
     top: `-${scrollPosition}px`,
     width: '100%',
   });
+
   document.addEventListener('touchmove', preventTouchMove, { passive: false });
 }
 
-function unlockScroll() {
+function unlockScroll(restore = true) {
+  if (!isLocked) return;
+  isLocked = false;
+
   body.classList.remove('add-scrollLock');
   Object.assign(body.style, { position: '', top: '', width: '' });
-  window.scrollTo(0, scrollPosition);
+
+  if (restore) window.scrollTo(0, scrollPosition);
+
   document.removeEventListener('touchmove', preventTouchMove);
 }
 
@@ -73,13 +84,16 @@ function closeHeader() {
   unlockScroll();
 }
 
+// ウィンドウ幅に応じたヘッダー状態更新
 function updateHeaderState() {
-  if (window.innerWidth >= breakpoint) {
+  const isPC = window.innerWidth >= breakpoint;
+
+  if (isPC) {
     header.classList.add('add-active');
-    unlockScroll();
+    unlockScroll(false); // ページ位置を維持したまま解除
   } else {
     header.classList.remove('add-active');
-    unlockScroll();
+    unlockScroll(false);
   }
 }
 
@@ -93,7 +107,7 @@ function smoothScrollTo(targetY, duration = 600) {
 
   function step(currentTime) {
     const progress = Math.min((currentTime - startTime) / duration, 1);
-    const ease = 0.5 - Math.cos(progress * Math.PI) / 2;
+    const ease = 0.5 - Math.cos(progress * Math.PI) / 2; // イージング
     window.scrollTo(0, startY + distance * ease);
     if (progress < 1) requestAnimationFrame(step);
   }
@@ -118,18 +132,25 @@ function onScrollTriggerClick(e) {
 
   if (window.innerWidth < breakpoint) closeHeader();
 
+  // iOS Safari対策で少し遅延
   setTimeout(() => scrollToSection(targetId), 100);
 }
 
+// ================================
+// イベント登録
+// ================================
 function addEventListeners() {
   window.addEventListener('resize', updateHeaderState);
   openBtn?.addEventListener('click', openHeader);
   closeBtn?.addEventListener('click', closeHeader);
-  scrollTriggers.forEach((trigger) =>
+  scrollTriggers.forEach(trigger =>
     trigger.addEventListener('click', onScrollTriggerClick)
   );
 }
 
+// ================================
+// 初期化
+// ================================
 function initHeader() {
   updateHeaderState();
   addEventListeners();
