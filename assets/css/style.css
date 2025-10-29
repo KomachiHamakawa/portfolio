@@ -13,7 +13,7 @@ body {
   line-height: 1;
 }
 
-body.add-scrollLock{
+body.add-scrollLock {
   overflow: hidden;
 }
 
@@ -56,7 +56,26 @@ a:hover {
   }
 }
 
-/* calc(375 / 750 * 100%) */
+.part-fadeIn {
+  transform: translateY(calc(40 / 750 * 100vw)) rotate(0.001deg);
+  opacity: 0;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+
+  @media (min-width: 768px) {
+    transform: translateY(40px) rotate(0.001deg);
+    opacity: 0;
+  }
+}
+
+.part-fadeIn.add-visible {
+  transform: translateY(0) rotate(0.01deg);
+  opacity: 1;
+
+  @media (min-width: 768px) {
+    transform: translateY(0) rotate(0.01deg);
+    opacity: 1;
+  }
+}
 
 /* header */
 .header {
@@ -278,8 +297,22 @@ a:hover {
   position: relative;
   min-height: 600px;
   height: 100vh;
-  @media (min-width: 768px) {
-    min-height: 700px;
+
+  .kv_txtArea {
+    opacity: 0;
+    transition: opacity 1s 0.5s ease-out;
+  }
+
+  .kv_scrollWrap {
+    opacity: 0;
+    transition: opacity 1s 1s ease-out;
+  }
+}
+
+.kv.add-visible {
+  .kv_txtArea,
+  .kv_scrollWrap {
+    opacity: 1;
   }
 }
 
@@ -297,7 +330,7 @@ a:hover {
   text-align: center;
 
   @media (min-width: 768px) {
-    font-size: calc(72 / 1280 * 100vw);
+    font-size: calc(64 / 1280 * 100vw);
   }
 }
 
@@ -309,7 +342,7 @@ a:hover {
   line-height: 1.5;
 
   @media (min-width: 768px) {
-    font-size: calc(24 / 1280 * 100vw);
+    font-size: calc(20 / 1280 * 100vw);
     margin-top: calc(10 / 1280 * 100vw);
   }
 }
@@ -326,9 +359,9 @@ a:hover {
   display: inline-block;
   position: absolute;
   bottom: 0;
-  padding-bottom: calc(130 / 750 * 100vw);
+  padding-bottom: calc(90 / 750 * 100vw);
   color: #333;
-  font-size: calc(24 / 750 * 100vw);
+  font-size: calc(16 / 750 * 100vw);
   line-height: 1;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -337,13 +370,13 @@ a:hover {
   transform: translateX(-50%);
 
   @media (min-width: 768px) {
-    padding-bottom: calc(110 / 1280 * 100vw);
-    font-size: calc(24 / 1280 * 100vw);
+    padding-bottom: calc(90 / 1280 * 100vw);
+    font-size: calc(20 / 1280 * 100vw);
   }
 
   @media (min-width: 1280px) {
-    padding-bottom: 110px;
-    font-size: 24px;
+    padding-bottom: 90px;
+    font-size: 20px;
   }
 }
 
@@ -359,16 +392,16 @@ a:hover {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: calc(2 / 750 * 100vw);
-  height: calc(120 / 750 * 100vw);
+  width: calc(1 / 750 * 100vw);
+  height: calc(80 / 750 * 100vw);
   background: #333;
-  animation: liner 2.5s cubic-bezier(1, 0, 0, 1) infinite;
+  animation: liner 2s cubic-bezier(1, 0, 0, 1) infinite;
 
   @media (min-width: 768px) {
-    width: calc(2 / 1280 * 100vw);
+    width: calc(1 / 1280 * 100vw);
     max-width: 2px;
-    height: calc(100 / 1280 * 100vw);
-    max-height: 100px;
+    height: calc(80 / 1280 * 100vw);
+    max-height: 80px;
   }
 }
 
@@ -529,6 +562,7 @@ a:hover {
     img {
       @media (min-width: 768px) {
         transform: scale(1.2);
+        transition: transform 0.2s ease-out;
       }
     }
   }

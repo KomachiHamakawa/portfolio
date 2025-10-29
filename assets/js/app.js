@@ -157,3 +157,40 @@ function initHeader() {
 }
 
 initHeader();
+
+
+// ================================
+// フェードイン制御
+// ================================
+const fadeTargets = document.querySelectorAll('.js-fadeTarget');
+
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+
+    entry.target.classList.add('add-visible');
+    observer.unobserve(entry.target); // 一度だけ発火
+  });
+}
+
+function initFadeInObserver() {
+  if (!fadeTargets.length) return;
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px', // 正確な発火位置
+    threshold: 0,
+  };
+
+  const observer = new IntersectionObserver(handleIntersection, observerOptions);
+  fadeTargets.forEach(target => observer.observe(target));
+}
+
+initFadeInObserver();
+
+window.addEventListener('load', () => {
+  const kvFadeEl = document.querySelector('.js-kvFade');
+  if (kvFadeEl) {
+    kvFadeEl.classList.add('add-visible');
+  }
+});
