@@ -1050,6 +1050,8 @@ a {
   line-height: 1.5;
   margin-top: calc(16 / 750 * 100vw);
   margin-inline: auto;
+  padding-left: 1em;
+  text-indent: -1em;
 
   @media (min-width: 768px) {
     font-size: calc(16 / 960 * 100vw);
@@ -1063,7 +1065,7 @@ a {
     margin-top: calc(16 / 750 * 100vw);
 
     @media (min-width: 768px) {
-      margin-top: calc(6 / 780 * 100%);
+      margin-top: calc(16 / 780 * 100%);
     }
   }
 }
