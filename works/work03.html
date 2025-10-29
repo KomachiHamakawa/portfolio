@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>案件/プロジェクト紹介サイト | Hamakawa's portfolio</title>
+  <meta name="description" content="コーダー 濱川こまちのポートフォリオサイトです。">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body id="top">
+  <header id="header" class="header">
+    <div class="header_inner">
+      <div class="header_contents">
+        <a class="header_logoLink js-scrollTrigger" href="../index.html">
+          <span class="mod-colorChange">H</span>amakawa<br><span class="mod-colorChange">P</span>ortfolio
+        </a>
+        <nav class="header_nav">
+          <ul class="header_navList">
+            <li class="header_navItem">
+              <a class="header_navItem_link js-scrollTrigger" href="../index.html">
+                <span class="header_navItem_txt">Top</span>
+              </a>
+            </li>
+            <li class="header_navItem">
+              <a class="header_navItem_link js-scrollTrigger" href="../index.html#works">
+                <span class="header_navItem_txt">Works</span>
+              </a>
+            </li>
+            <li class="header_navItem">
+              <a class="header_navItem_link js-scrollTrigger" href="../index.html#about">
+                <span class="header_navItem_txt">About</span>
+              </a>
+            </li>
+            <li class="header_navItem">
+              <a class="header_navItem_link js-scrollTrigger" href="../index.html#contact">
+                <span class="header_navItem_txt">Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header_closeBtnWrap util-sp">
+          <button id="js-header_closeBtn" class="header_closeBtn">
+            <span class="header_closeBtn_line mod-1"></span>
+            <span class="header_closeBtn_line mod-2"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="header_opanBtnWrap util-sp">
+      <button id="js-header_openBtn" class="header_openBtn">
+        <span class="header_openBtn_line mod-1"></span>
+        <span class="header_openBtn_line mod-2"></span>
+        <span class="header_openBtn_line mod-3"></span>
+      </button>
+    </div>
+  </header>
+  <main>
+
+    <div class="works-outTtl">
+      <div class="part_ttl">
+        <span class="part_ttl_en">Works</span>
+        <span class="part_ttl_ja">制作実績</span>
+      </div>
+    </div>
+
+    <section class="part-section works-section">
+      <div class="works-section_inner">
+
+        <h1 class="works-section_ttl js-fadeTarget part-fadeIn">案件/プロジェクト紹介サイト</h1>
+        <figure class="works-section_figure js-fadeTarget part-fadeIn">
+          <img src="../assets/images/works/img2.png" alt="">
+        </figure>
+        <dl class="works-section_list js-fadeTarget part-fadeIn">
+          <div class="works-section_itemWrap">
+            <dt class="works-section_term">サイトURL</dt>
+            <dd class="works-section_desc">
+              <a href="https://g-route.mlit.go.jp/" target="_blank" rel="noopener noreferrer">
+                https://g-route.mlit.go.jp/
+              </a>
+            </dd>
+          </div>
+          <div class="works-section_itemWrap">
+            <dt class="works-section_term">担当範囲</dt>
+            <dd class="works-section_desc">・車の下スライドから下部分のコーディング(静的部分のみ)</dd>
+          </div>
+          <div class="works-section_itemWrap">
+            <dt class="works-section_term">使用ツール・環境</dt>
+            <dd class="works-section_desc">・Git / GitHub（ソースコード・バージョン管理）</dd>
+            <dd class="works-section_desc">・Cursor（コードエディタ）</dd>
+            <dd class="works-section_desc">・Illustrator（カンプ確認）</dd>
+          </div>
+          <div class="works-section_itemWrap">
+            <dt class="works-section_term">使用技術</dt>
+            <dd class="works-section_desc">HTML / CSS </dd>
+          </div>
+          <div class="works-section_itemWrap">
+            <dt class="works-section_term">作業時間</dt>
+            <dd class="works-section_desc">コーディング14時間</dd>
+          </div>
+        </dl>
+        <section class="works-section_detail js-fadeTarget part-fadeIn">
+          <h2 class="works-section_subttl">実装について</h2>
+          <p class="works-section_txt">
+            道やイラストなど、画面スクロールに合わせて出現するアニメーション部分は他の担当者が実装しており、私は静的なマークアップを担当しました
+          </p>
+          <p class="works-section_txt">
+            右から左へスライドする車のアニメーションでは、スライド中にカクつきが発生しないように、要素（車）を複製して連続的に動作するよう調整しました。
+          </p>
+        </section>
+    </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <small class="footer_small">© 2025 hamakawa's portfolio All rights reserved</small>
+  </footer>
+
+  <script src="../assets/js/swiper-bundle.min.js"></script>
+  <script src="../assets/js/app.js" defer></script>
+</body>
+
+</html>
