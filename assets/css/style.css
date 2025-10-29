@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
-/* html{
-  scroll-behavior: smooth;
-} */
+html {
+  @media (min-width: 768px) {
+    scroll-padding-top: 60px;
+  }
+}
 
 body {
   color: #333;
