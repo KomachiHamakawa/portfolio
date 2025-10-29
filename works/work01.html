@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自主/ポートフォリオサイト | Hamakawa's portfolio</title>
+  <meta name="description" content="コーダー 濱川こまちのポートフォリオサイトです。">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body id="top">
+  <header id="header" class="header">
+    <div class="header_inner">
+      <div class="header_contents">
+        <a class="header_logoLink js-scrollTrigger" href="#kv">
+          <span class="mod-colorChange">H</span>amakawa<br><span class="mod-colorChange">P</span>ortfolio
+        </a>
+        <nav class="header_nav">
+          <ul class="header_navList">
+            <li class="header_navItem">
+              <a class="header_navItem_link js-scrollTrigger" href="../index.html">
+                <span class="header_navItem_txt">Top</span>
+              </a>
+            </li>
+            <li class="header_navItem">
+              <a class="header_navItem_link js-scrollTrigger" href="../index.html#works">
+                <span class="header_navItem_txt">Works</span>
+              </a>
+            </li>
+            <li class="header_navItem">
+              <a class="header_navItem_link js-scrollTrigger" href="../index.html#about">
+                <span class="header_navItem_txt">About</span>
+              </a>
+            </li>
+            <li class="header_navItem">
+              <a class="header_navItem_link js-scrollTrigger" href="../index.html#contact">
+                <span class="header_navItem_txt">Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header_closeBtnWrap util-sp">
+          <button id="js-header_closeBtn" class="header_closeBtn">
+            <span class="header_closeBtn_line mod-1"></span>
+            <span class="header_closeBtn_line mod-2"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="header_opanBtnWrap util-sp">
+      <button id="js-header_openBtn" class="header_openBtn">
+        <span class="header_openBtn_line mod-1"></span>
+        <span class="header_openBtn_line mod-2"></span>
+        <span class="header_openBtn_line mod-3"></span>
+      </button>
+    </div>
+  </header>
+  <main>
+
+    <div class="works-outTtl">
+      <div class="part_ttl">
+        <span class="part_ttl_en">Works</span>
+        <span class="part_ttl_ja">制作実績</span>
+      </div>
+    </div>
+
+    <section class="part-section works-section">
+      <div class="works-section_inner">
+
+        <h1 class="works-section_ttl js-fadeTarget part-fadeIn">自主 / ポートフォリオサイト</h1>
+        <figure class="works-section_figure js-fadeTarget part-fadeIn">
+          <img src="../assets/images/works/img1.png" alt="ポートフォリオサイトのトップページイメージ">
+        </figure>
+        <dl class="works-section_list js-fadeTarget part-fadeIn">
+          <div class="works-section_itemWrap">
+            <dt class="works-section_term">サイトURL</dt>
+            <dd class="works-section_desc">
+              <a href="https://portfolio.khamakawa.com/" target="_blank" rel="noopener noreferrer">
+                https://portfolio.khamakawa.com/
+              </a>
+            </dd>
+          </div>
+          <div class="works-section_itemWrap">
+            <dt class="works-section_term">担当範囲</dt>
+            <dd class="works-section_desc">デザイン / コーディング</dd>
+          </div>
+          <div class="works-section_itemWrap">
+            <dt class="works-section_term">使用ツール・環境</dt>
+            <dd class="works-section_desc">・Git / GitHub（ソースコード・バージョン管理）</dd>
+            <dd class="works-section_desc">・Xserver（デプロイ環境）</dd>
+            <dd class="works-section_desc">・Cursor（コードエディタ）</dd>
+            <dd class="works-section_desc">・Figma（デザインカンプ作成）</dd>
+          </div>
+          <div class="works-section_itemWrap">
+            <dt class="works-section_term">使用技術</dt>
+            <dd class="works-section_desc">HTML / CSS / Vanilla.js / Swiper</dd>
+          </div>
+          <div class="works-section_itemWrap">
+            <dt class="works-section_term">作業時間</dt>
+            <dd class="works-section_desc">デザイン 約10時間 + コーディング 約12時間</dd>
+          </div>
+        </dl>
+        <section class="works-section_detail js-fadeTarget part-fadeIn">
+          <h2 class="works-section_subttl">実装について</h2>
+          <p class="works-section_txt">
+            スマートフォン表示時、ハンバーガーメニュー開閉中は背景のスクロールを制御する仕様を実装しました。</p>
+          <p class="works-section_txt">また、TOPページと下層（Works詳細ページ）でスタイルが競合しないよう、スコープを分けて設計しています。</p>
+          <p class="works-section_txt">TOPページのAboutセクションでは、スキル説明のアコーディオン開閉をdisplay: grid;を用いて実装しました。</p>
+        </section>
+    </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <small class="footer_small">© 2025 hamakawa's portfolio All rights reserved</small>
+  </footer>
+
+  <script src="../assets/js/swiper-bundle.min.js"></script>
+  <script src="../assets/js/app.js" defer></script>
+</body>
+
+</html>
