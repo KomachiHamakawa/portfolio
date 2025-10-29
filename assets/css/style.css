@@ -1005,10 +1005,10 @@ a:hover {
   text-align: center;
   font-weight: 700;
   @media (min-width: 768px) {
-    font-size: calc(24 / 960 * 100vw);
+    font-size: calc(22 / 960 * 100vw);
   }
   @media (min-width: 960px) {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 .works-section_txt{
