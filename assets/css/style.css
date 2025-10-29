@@ -437,16 +437,19 @@ a:hover {
   background-color: #FFF8ED;
   opacity: 0.9;
   border-radius: calc(20 / 750 * 100vw);
+  box-shadow: calc(4 / 750 * 100vw) calc(4 / 750 * 100vw) calc(8 / 750 * 100vw) rgba(0, 0, 0, 0.25);
 
   @media (min-width: 768px) {
     border-radius: calc(20 / 1280 * 100vw);
     margin-top: calc(80 / 1280 * 100vw);
     padding-top: calc(40 / 1280 * 100%);
     padding-bottom: calc(56 / 1280 * 100%);
+    box-shadow: calc(4 / 1280 * 100vw) calc(4 / 750 * 100vw) calc(8 / 1280 * 100vw) rgba(0, 0, 0, 0.25);
   }
 
   @media (min-width: 960px) {
     border-radius: 20px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -537,7 +540,7 @@ a:hover {
   display: block;
   width: calc(560 / 750 * 100vw);
   margin-inline: auto;
-  box-shadow: 0 calc(4 / 750 * 100vw) calc(4 / 750 * 100vw) rgba(0, 0, 0, 0.25);
+  box-shadow: calc(2 / 750 * 100vw) calc(2 / 750 * 100vw) calc(4 / 750 * 100vw) rgba(0, 0, 0, 0.25);
   border-radius: calc(20 / 750 * 100vw);
   overflow: hidden;
   height: 100%;
@@ -545,13 +548,13 @@ a:hover {
 
   @media (min-width: 768px) {
     width: 100%;
-    box-shadow: 0 calc(4 / 1280 * 100vw) calc(4 / 1280 * 100vw) rgba(0, 0, 0, 0.25);
+    box-shadow: calc(2 / 1280 * 100vw) calc(2 / 1280 * 100vw) calc(4 / 1280 * 100vw) rgba(0, 0, 0, 0.25);
     border-radius: calc(20 / 1280 * 100vw);
   }
 
   @media (min-width: 960px) {
     border-radius: 20px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   }
 }
 
