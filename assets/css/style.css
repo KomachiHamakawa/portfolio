@@ -1001,6 +1001,8 @@ a {
   font-size: calc(28 / 750 * 100vw);
   padding-left: 1em;
   text-indent: -1em;
+  word-break: break-word;
+  overflow-wrap: break-word;
 
   @media (min-width: 768px) {
     font-size: calc(16 / 960 * 100vw);
@@ -1008,6 +1010,13 @@ a {
 
   @media (min-width: 960px) {
     font-size: 16px;
+  }
+  &.mod-noIndent{
+    padding-left: 0;
+    text-indent: 0;
+  }
+  a {
+    text-decoration: underline;
   }
 }
 
@@ -1052,6 +1061,8 @@ a {
   margin-inline: auto;
   padding-left: 1em;
   text-indent: -1em;
+  word-break: break-word;
+  overflow-wrap: break-word;
 
   @media (min-width: 768px) {
     font-size: calc(16 / 960 * 100vw);
