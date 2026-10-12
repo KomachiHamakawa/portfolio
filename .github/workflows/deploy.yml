@@ -1,5 +1,4 @@
-name: Deploy to Xserver
-
+name: Deploy to XserverS
 on:
   push:
     branches:
